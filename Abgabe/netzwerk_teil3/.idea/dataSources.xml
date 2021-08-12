@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="hibernate-firma.cfg.xml/Hibernate" uuid="88f0903e-4b4e-44a1-b33f-94b49ac58238">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+D:/dbae_demo-master/src/main/resources/hibernate-firma.cfg.xml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://pgsql.ins.hs-anhalt.de/stud22_db?currentSchema=teil3</jdbc-url>
+    </data-source>
+  </component>
+</project>

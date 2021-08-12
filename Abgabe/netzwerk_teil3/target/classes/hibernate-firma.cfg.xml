@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://pgsql.ins.hs-anhalt.de/stud22_db?currentSchema=teil3</property>
+        <property name="hibernate.connection.username">stud22</property>
+        <property name="hibernate.connection.password">GzJ008rM</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="hibernate.connection.pool_size">1</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.PostgreSQL92Dialect</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.DisabledCaching</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">false</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.c3p0.max_size">100</property>
+        <property name="hibernate.c3p0.min_size">0</property>
+        <property name="hibernate.c3p0.acquire_increment">1</property>
+        <property name="hibernate.c3p0.idle_test_period">300</property>
+        <property name="hibernate.c3p0.max_statements">0</property>
+        <property name="hibernate.c3p0.timeout">100</property>
+        <property name="hibernate.jdbc.batch_size">50</property>
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+
+		<mapping class="netzwerk.Tag" />
+        <mapping class="netzwerk.TagClass" />
+        <mapping class="netzwerk.Place" />
+        <mapping class="netzwerk.Continent" />
+        <mapping class="netzwerk.Country" />
+        <mapping class="netzwerk.City" />
+        <mapping class="netzwerk.Person" />
+        <mapping class="netzwerk.Emails" />
+        <mapping class="netzwerk.Speaks" />
+        <mapping class="netzwerk.Forum" />
+        <mapping class="netzwerk.Message" />
+        <mapping class="netzwerk.Post" />
+        <mapping class="netzwerk.Comment" />
+        <mapping class="netzwerk.Forum_hasMember" />
+        <mapping class="netzwerk.PersonLikesComment" />
+        <mapping class="netzwerk.PersonLikePost" />
+        <mapping class="netzwerk.PersonKnowsPerson" />
+        <mapping class="netzwerk.Organisation" />
+        <mapping class="netzwerk.University" />
+        <mapping class="netzwerk.Company" />
+        <mapping class="netzwerk.WorkAt" />
+        <mapping class="netzwerk.StudyAt" />
+        <mapping class="netzwerk.IsSubClassOF" />
+        <mapping class="personenbezogene.ShortestFriendshipPath" />
+
+
+    </session-factory>
+
+</hibernate-configuration>
